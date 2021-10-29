@@ -1,3 +1,4 @@
+/* global styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,151 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* outer div */
+.main-div{
+  background-color:rgba(185, 49, 76, 0.836) ;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+/* inner div */
+.center-div{
+  background-color: aliceblue;
+  margin: auto;
+  width: 30vw;
+  height: 70vh;
+  top: 10%;
+  border-radius: 10px;
+}
+/* h1 */
+.heading{
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: transparent;
+  color: black;
+  background-color: blueviolet;
+  text-align: center;
+ 
+}
+/* input */
+.items{
+  text-align: center;
+  justify-content: center;
+  height: 30px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  width: 60%;
+  border-bottom: 2px solid #8566aa ;
+  outline: none; 
+}
+/* button */
+.add-list{
+  min-height: 40px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #8566aa;
+  color: white;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+/* input placeholder */
+::placeholder{
+   color: black;
+   font-size: large;
+   text-transform: uppercase;
+}
+/* button hover */
+.add-list:hover{
+  background-color: aqua;
+}
+/* ordered list */
+ol{
+  margin-top: 30px;
+  list-style-type: none;
+}
+/* ordered list in li */
+ol li{
+  padding-left:30px ;
+  text-align: left;
+  font-size: large;
+  align-items: center;
+  display: flex;
+  min-height: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+/* cross part */
+.todo_style{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.todo_style .fa-times{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8566aa;
+  border-radius: 50%;
+  margin: 0 15px 0 35px;
+  color: aliceblue;
+}
+/* cross part in hover  */
+.todo_style .fa-times:hover{
+  background-color: crimson;
+}
+/* media query */
+@media (max-width :768px) {
+  .center-div{
+    width: 55%;
+  }
+  .todo_style .fa-times{
+    margin: 0 15px 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+    margin-left: 5px;
+    min-height: 40px;
+    width: 40px;
+    color: white;
+    font-size: 30px;
+  }
+}
+@media (max-width:490px) {
+  .center-div{
+    width: 70%;
+  }
+  .todo_style .fa-times{
+    margin: 0 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+    margin-left: 2px;
+    min-height: 20px;
+    width: 20px;
+    color: white;
+    font-size: 20px;
+  }
 }
